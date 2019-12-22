@@ -1,0 +1,21 @@
+FEATURES:
+* Terrain generation.
+* Messaging/event system.
+* Cameras with view matrices.
+* Projections with projection matrices.
+
+
+
+OPTIMIZATIONS:
+* Transformation matrices do not need to be made every frame.
+  Make them once and store them in the Transform component.
+  This will take up more memory, but creating a matrix for every component
+  every single frame is probably a bigger issue.
+
+
+
+IMPROVEMENTS:
+* Input system sucks, but it might just be my keyboard.
+  When first holding down a key, it takes a second for the "holding down" part
+  to kick in, so moving a triangle with inputs feels sluggish.
+  Diagonal movement also does not work right now.
