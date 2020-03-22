@@ -13,14 +13,6 @@
 
 int main()
 {
-	const int WIDTH = 80;
-	const int HEIGHT = 80;
-	const int FILL_PROBABILITY = 35;
-	const int AFFINITY = 3;
-	const float BLOCK_SIZE = 0.25f;
-	const uint SMOOTH = (uint)0;
-	const int SEED = 26;
-
 	const int width = 1280;
 	const int height = 920;
 	Display display(width, height, "Chirp!");
@@ -37,15 +29,16 @@ int main()
 
 	factory.CreateEntity_Triangle();
 	factory.CreateEntity_Moveable_Triangle();
-	
+
+	const float UPDATE = 0.15f;
 
 	while (!display.IsClosed())
 	{
-		inputSystem.Update(0.15f);
+		inputSystem.Update(UPDATE);
 		ECSComponentArray<InputComponent>& inputs = inputSystem.ExportInputs();
 
 		physicsSystem.SynchronizeInputs(inputs);
-		physicsSystem.Update(0.15f);
+		physicsSystem.Update(UPDATE);
 
 		inputSystem.ResetInputs();
 
@@ -53,11 +46,11 @@ int main()
 		ECSComponentArray<TransformComponent>& transforms = physicsSystem.ExportTransforms();
 		renderSystem.SynchronizeTransforms(transforms);
 
-		renderSystem.Update(0.15f);
+		renderSystem.Update(UPDATE);
 
 		display.Update();
 	}
-
+	
 	std::cout << "End." << std::endl;
 	return 0;
 }

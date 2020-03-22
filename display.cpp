@@ -12,14 +12,11 @@ Display::~Display()
 
 // display methods:
 
-
-// temporary close method that the input system will call.
 void Display::CloseWindow()
 {
-	m_isClosed = true;
+	isClosed = true;
 }
 
-// clear the display with a full color.
 void Display::Clear(float r, float g, float b, float a)
 {
 	glClearColor(r, g, b, a);
@@ -28,13 +25,13 @@ void Display::Clear(float r, float g, float b, float a)
 
 bool Display::IsClosed()
 {
-	return m_isClosed;
+	return isClosed;
 }
 
 void Display::Update()
 {
 	// swap buffers.
-	SDL_GL_SwapWindow(m_window);
+	SDL_GL_SwapWindow(window);
 
 	// check for updates.
 	/*SDL_Event e;
@@ -42,12 +39,11 @@ void Display::Update()
 	{
 		if (e.type == SDL_QUIT)
 		{
-			m_isClosed = true;
+			isClosed = true;
 		}
 	}*/
 }
 
-// initialize SDL.
 void Display::InitializeSDL(int width, int height, const std::string& title)
 {
 	SDL_Init(SDL_INIT_EVERYTHING);
@@ -61,19 +57,19 @@ void Display::InitializeSDL(int width, int height, const std::string& title)
 	SDL_GL_SetAttribute(SDL_GL_DOUBLEBUFFER, 1); // double buffering for swap buffers. 
 
 	// can choose where on the monitor screen to create the window.
-	m_window = SDL_CreateWindow(title.c_str(), SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, width, height, SDL_WINDOW_OPENGL);
+	window = SDL_CreateWindow(title.c_str(), SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, width, height, SDL_WINDOW_OPENGL);
 
 	// create the context.
-	m_glContext = SDL_GL_CreateContext(m_window);
+	glContext = SDL_GL_CreateContext(window);
 }
+
 void Display::DeInitializeSDL()
 {
-	SDL_GL_DeleteContext(m_glContext);
-	SDL_DestroyWindow(m_window);
+	SDL_GL_DeleteContext(glContext);
+	SDL_DestroyWindow(window);
 	SDL_Quit();
 }
 
-// initialize GLEW.
 void Display::InitializeGLEW()
 {
 	GLenum status = glewInit();
@@ -82,10 +78,9 @@ void Display::InitializeGLEW()
 		std::cerr << "ERROR: GLEW failed to initialize. " << std::endl;
 	}
 	
-	m_isClosed = false;
+	isClosed = false;
 }
 
-// Clean Up:
 void Display::CleanUp()
 {
 	DeInitializeSDL();

@@ -3,7 +3,7 @@ CXXFLAGS=-std=c++17 -g
 
 OBJDIR=obj
 
-SOURCES=main.cpp display.cpp ecs/ecscomponent.cpp ecs/ecsentity.cpp ecs/ecscomponentarray.cpp systems/testsystem.cpp systems/objectfactory.cpp components/transformcomponent.cpp components/vertex.cpp components/meshcomponent.cpp systems/loader.cpp systems/rendersystem.cpp systems/shaderprogram.cpp systems/basicshader.cpp mathematics.cpp systems/physicssystem.cpp systems/inputsystem.cpp components/inputcomponent.cpp 
+SOURCES=main.cpp display.cpp ecs/ecscomponent.cpp ecs/ecsentity.cpp ecs/ecscomponentarray.cpp systems/testsystem.cpp systems/objectfactory.cpp components/transformcomponent.cpp components/vertex.cpp components/meshcomponent.cpp systems/loader.cpp systems/rendersystem.cpp systems/shaderprogram.cpp systems/basicshader.cpp mathematics.cpp systems/physicssystem.cpp systems/inputsystem.cpp components/inputcomponent.cpp systems/terrainfactory.cpp
 
 OBJECTS=$(patsubst %.cpp,$(OBJDIR)/%.o,$(SOURCES))
 LLIBS=$(shell pkg-config --cflags --libs glew sdl2)

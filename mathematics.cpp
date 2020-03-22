@@ -1,5 +1,4 @@
 #include "mathematics.hpp"
-#include <iostream>
 
 glm::mat4 Mathematics::GetTranslationMatrix(float x, float y, float z)
 {

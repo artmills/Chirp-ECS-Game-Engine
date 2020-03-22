@@ -93,14 +93,14 @@ const size_t ECSComponent<TComponent>::m_size(sizeof(TComponent)); // list initi
 struct PositionComponent : public ECSComponent<PositionComponent>
 {
 	PositionComponent();
-	PositionComponent(uint entityID, float _x, float _y);
+	PositionComponent(uint entityID, float x_, float y_);
 	float x, y;
 };
 
 struct VelocityComponent : public ECSComponent<VelocityComponent>
 {
 	VelocityComponent();
-	VelocityComponent(uint entityID, float _vx, float _vy);
+	VelocityComponent(uint entityID, float vx_, float vy_);
 	float vx, vy;
 };
 

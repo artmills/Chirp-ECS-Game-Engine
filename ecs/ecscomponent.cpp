@@ -33,7 +33,7 @@ PositionComponent::PositionComponent()
 {
 	m_componentType = ComponentType::Position;
 }
-PositionComponent::PositionComponent(uint entityID, float _x, float _y) : x(_x), y(_y)
+PositionComponent::PositionComponent(uint entityID, float x_, float y_) : x(x_), y(y_)
 {
 	setEntityHandle(entityID);
 }
@@ -42,7 +42,7 @@ VelocityComponent::VelocityComponent()
 {
 	m_componentType = ComponentType::Velocity;
 }
-VelocityComponent::VelocityComponent(uint entityID, float _vx, float _vy) : vx (_vx), vy(_vy)
+VelocityComponent::VelocityComponent(uint entityID, float vx_, float vy_) : vx (vx_), vy(vy_)
 {
 	setEntityHandle(entityID);
 }

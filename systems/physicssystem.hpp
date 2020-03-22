@@ -16,8 +16,7 @@ public:
 
 	PhysicsSystem();
 
-	//const float gravity = -0.003f;
-	const float gravity = 0.0f;
+	const float gravity = -0.003f;
 	const float velocity = 1.00f;
 	const float zAccel = 6.0f;
 
