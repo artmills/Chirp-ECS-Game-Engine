@@ -133,7 +133,6 @@ ShaderProgram::ShaderProgramSource ShaderProgram::ParseShader(const std::string&
 void ShaderProgram::LoadUniform(uint location, glm::mat4& matrix)
 {
 	glUniformMatrix4fv(location, 1, GL_FALSE, &matrix[0][0]); // same as the easy way to get a pointer to an array's entries.
-	//glUniformMatrix4fv(location, 1, GL_TRUE, &matrix[0][0]); // same as the easy way to get a pointer to an array's entries.
 }
 
 

@@ -6,27 +6,44 @@
 #include "../utilities.hpp"
 #include "shaderprogram.hpp"
 
-// basic implementation of a shader.
+/** Implementation of a basic shader program.
+ *
+ * This shader accounts for the following attributes:
+ *
+ * 1) vec3 vPosition
+ * 2) vec4 vColor
+ *
+ * and the following uniforms:
+ *
+ * 1) mat4 uModelViewProjection
+ */
 class BasicShader : public ShaderProgram
 {
 public:
+
+	/** Initialize the location of the shader source file. */
 	BasicShader();
 	~BasicShader();
 
+
+	/** Call PrepareShader(). */
 	void Initialize();
 
-	// uniforms.
+
+	/** Load the given MVP matrix as a uniform. */
 	void LoadModelViewProjectionMatrix(glm::mat4& mvp);
 
 private:
 
-	// source code:
+	/** Path to shader source file. */
 	static std::string m_shaderFile;
 
-	// uniforms:
+
+	/** ID of the MVP matrix given by GetUniformLocation(mvp). */
 	uint m_locationModelViewProjectionMatrix;
 
-	// print:
+
+	/** Debug print method. This really shouldn't be here. */
 	void PrintRowMajor(glm::mat4& matrix);
 
 protected:
