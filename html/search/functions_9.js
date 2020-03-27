@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['loadmodelviewprojectionmatrix_374',['LoadModelViewProjectionMatrix',['../classBasicShader.html#abcf99f310117c3317d3fb5988be67834',1,'BasicShader']]],
-  ['loaduniform_375',['LoadUniform',['../classShaderProgram.html#ac46febb828447bb5c0f353c988695c85',1,'ShaderProgram']]]
+  ['vertex_138',['Vertex',['../structVertex.html#a97488994a2482d70da74e1b91d40e169',1,'Vertex::Vertex()'],['../structVertex.html#a8f42b87c8af0e4ccefea1f06f959e836',1,'Vertex::Vertex(float _x, float _y, float _z, float _r, float _g, float _b, float _a)']]]
 ];

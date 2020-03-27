@@ -4,7 +4,7 @@
 
 #include "../ecs/ecscomponent.hpp"
 
-// data to describe an object's location and orientation.
+/** Data to describe an object's location and orientation. */
 struct TransformComponent : public ECSComponent<TransformComponent>
 {
 public:

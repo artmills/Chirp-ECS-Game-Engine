@@ -11,6 +11,8 @@
 #include "systems/objectfactory.hpp"
 #include "systems/inputsystem.hpp"
 
+#include "systems/terrainfactory.hpp"
+
 int main()
 {
 	const int width = 1280;
@@ -27,8 +29,11 @@ int main()
 
 	ObjectFactory factory(&renderSystem, &physicsSystem, &inputSystem);	
 
-	factory.CreateEntity_Triangle();
-	factory.CreateEntity_Moveable_Triangle();
+	//factory.CreateEntity_Triangle();
+	//factory.CreateEntity_Moveable_Triangle();
+
+	factory.CreateEntity_Terrain(-10, -10, -50, 200, 200, 0.25f, 42, 3, 2);
+
 
 	const float UPDATE = 0.15f;
 

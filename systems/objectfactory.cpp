@@ -67,6 +67,21 @@ void ObjectFactory::CreateEntity_Moveable_Triangle()
 	RegisterToSystems(triangle, components);
 }
 
+void ObjectFactory::CreateEntity_Terrain(float x, float y, float z, int width, int height, float blockSize, int percent, int affinity, int smooth)
+{
+	ECSEntity terrain;
+	TransformComponent transform(terrain.getID(), x, y, z, 0, 0, 0);
+	MeshComponent mesh = TerrainFactory::CA(terrain.getID(), width, height, percent, affinity, smooth, blockSize);
+
+	terrain.giveComponent(ComponentType::Transform);
+	terrain.giveComponent(ComponentType::Mesh);
+
+	std::vector<BaseECSComponent*> components;
+	components.push_back(static_cast<BaseECSComponent*>(&transform));
+	components.push_back(static_cast<BaseECSComponent*>(&mesh));
+	RegisterToSystems(terrain, components);
+}
+
 void ObjectFactory::RegisterToSystems(ECSEntity& entity, std::vector<BaseECSComponent*>& components)
 {
 	// this might just have to be a giant switch on the component array in ECSEntity.

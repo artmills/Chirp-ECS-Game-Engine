@@ -74,26 +74,38 @@ $(function() {
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160; </div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include &lt;iostream&gt;</span></div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160; </div>
-<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment">// colored vertices used to build models.</span></div>
-<div class="line"><a name="l00006"></a><span class="lineno"><a class="line" href="structVertex.html">    6</a></span>&#160;<span class="keyword">struct </span><a class="code" href="structVertex.html">Vertex</a></div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;{</div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160; </div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;    <a class="code" href="structVertex.html">Vertex</a>();</div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;    <a class="code" href="structVertex.html">Vertex</a>(<span class="keywordtype">float</span> _x, <span class="keywordtype">float</span> _y, <span class="keywordtype">float</span> _z, <span class="keywordtype">float</span> _r, <span class="keywordtype">float</span> _g, <span class="keywordtype">float</span> _b, <span class="keywordtype">float</span> _a);</div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160; </div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    <span class="comment">// setters:</span></div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    <span class="keywordtype">void</span> setPosition(<span class="keywordtype">float</span> x, <span class="keywordtype">float</span> y, <span class="keywordtype">float</span> z);</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    <span class="keywordtype">void</span> setColor(<span class="keywordtype">float</span> r, <span class="keywordtype">float</span> g, <span class="keywordtype">float</span> b, <span class="keywordtype">float</span> a);</div>
+<div class="line"><a name="l00013"></a><span class="lineno"><a class="line" href="structVertex.html">   13</a></span>&#160;<span class="keyword">struct </span><a class="code" href="structVertex.html">Vertex</a></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;{</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="keyword">public</span>:</div>
 <div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160; </div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    <span class="keywordtype">float</span> x, y, z;</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    <span class="keywordtype">float</span> r, g, b, a;</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    <a class="code" href="structVertex.html#a97488994a2482d70da74e1b91d40e169">Vertex</a>();</div>
 <div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160; </div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    <span class="comment">// debug:</span></div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    <span class="keywordtype">void</span> PrintPosition();</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;};</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160; </div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <a class="code" href="structVertex.html#a97488994a2482d70da74e1b91d40e169">Vertex</a>(<span class="keywordtype">float</span> _x, <span class="keywordtype">float</span> _y, <span class="keywordtype">float</span> _z, <span class="keywordtype">float</span> _r, <span class="keywordtype">float</span> _g, <span class="keywordtype">float</span> _b, <span class="keywordtype">float</span> _a);</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160; </div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160; </div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="structVertex.html#a41be898a166aca05bc6d29e2e41132ff">setPosition</a>(<span class="keywordtype">float</span> <a class="code" href="structVertex.html#aa592e1564aa3b226ff629b824b240310">x</a>, <span class="keywordtype">float</span> y, <span class="keywordtype">float</span> z);</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160; </div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160; </div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="structVertex.html#a2b3a815d2398fc189b672cf20b80c315">setColor</a>(<span class="keywordtype">float</span> <a class="code" href="structVertex.html#a8c22b31da489e22d5d58ea667eda65b9">r</a>, <span class="keywordtype">float</span> g, <span class="keywordtype">float</span> b, <span class="keywordtype">float</span> a);</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160; </div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160; </div>
+<div class="line"><a name="l00034"></a><span class="lineno"><a class="line" href="structVertex.html#aa592e1564aa3b226ff629b824b240310">   34</a></span>&#160;    <span class="keywordtype">float</span> <a class="code" href="structVertex.html#aa592e1564aa3b226ff629b824b240310">x</a>, y, z;</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160; </div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160; </div>
+<div class="line"><a name="l00038"></a><span class="lineno"><a class="line" href="structVertex.html#a8c22b31da489e22d5d58ea667eda65b9">   38</a></span>&#160;    <span class="keywordtype">float</span> <a class="code" href="structVertex.html#a8c22b31da489e22d5d58ea667eda65b9">r</a>, g, b, a;</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160; </div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160; </div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="structVertex.html#a3bd2264d8b37477471d49160c768f31a">PrintPosition</a>();</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;};</div>
 </div><!-- fragment --></div><!-- contents -->
-<div class="ttc" id="astructVertex_html"><div class="ttname"><a href="structVertex.html">Vertex</a></div><div class="ttdef"><b>Definition:</b> vertex.hpp:6</div></div>
+<div class="ttc" id="astructVertex_html_a97488994a2482d70da74e1b91d40e169"><div class="ttname"><a href="structVertex.html#a97488994a2482d70da74e1b91d40e169">Vertex::Vertex</a></div><div class="ttdeci">Vertex()</div><div class="ttdef"><b>Definition:</b> vertex.cpp:3</div></div>
+<div class="ttc" id="astructVertex_html_a3bd2264d8b37477471d49160c768f31a"><div class="ttname"><a href="structVertex.html#a3bd2264d8b37477471d49160c768f31a">Vertex::PrintPosition</a></div><div class="ttdeci">void PrintPosition()</div><div class="ttdef"><b>Definition:</b> vertex.cpp:22</div></div>
+<div class="ttc" id="astructVertex_html_a41be898a166aca05bc6d29e2e41132ff"><div class="ttname"><a href="structVertex.html#a41be898a166aca05bc6d29e2e41132ff">Vertex::setPosition</a></div><div class="ttdeci">void setPosition(float x, float y, float z)</div><div class="ttdef"><b>Definition:</b> vertex.cpp:8</div></div>
+<div class="ttc" id="astructVertex_html"><div class="ttname"><a href="structVertex.html">Vertex</a></div><div class="ttdef"><b>Definition:</b> vertex.hpp:13</div></div>
+<div class="ttc" id="astructVertex_html_a8c22b31da489e22d5d58ea667eda65b9"><div class="ttname"><a href="structVertex.html#a8c22b31da489e22d5d58ea667eda65b9">Vertex::r</a></div><div class="ttdeci">float r</div><div class="ttdef"><b>Definition:</b> vertex.hpp:38</div></div>
+<div class="ttc" id="astructVertex_html_aa592e1564aa3b226ff629b824b240310"><div class="ttname"><a href="structVertex.html#aa592e1564aa3b226ff629b824b240310">Vertex::x</a></div><div class="ttdeci">float x</div><div class="ttdef"><b>Definition:</b> vertex.hpp:34</div></div>
+<div class="ttc" id="astructVertex_html_a2b3a815d2398fc189b672cf20b80c315"><div class="ttname"><a href="structVertex.html#a2b3a815d2398fc189b672cf20b80c315">Vertex::setColor</a></div><div class="ttdeci">void setColor(float r, float g, float b, float a)</div><div class="ttdef"><b>Definition:</b> vertex.cpp:14</div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 Generated by &#160;<a href="http://www.doxygen.org/index.html">

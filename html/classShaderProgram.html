@@ -72,6 +72,8 @@ $(function() {
 <div class="title">ShaderProgram Class Reference<span class="mlabels"><span class="mlabel">abstract</span></span></div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p><code>#include &lt;<a class="el" href="shaderprogram_8hpp_source.html">shaderprogram.hpp</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for ShaderProgram:</div>
 <div class="dyncontent">
@@ -89,7 +91,7 @@ Classes</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
 Public Types</h2></td></tr>
-<tr class="memitem:a25650db3acd964120e2adb355a5f4580"><td class="memItemLeft" align="right" valign="top"><a id="a25650db3acd964120e2adb355a5f4580"></a>enum &#160;</td><td class="memItemRight" valign="bottom"><b>ShaderType</b> { <br />
+<tr class="memitem:a25650db3acd964120e2adb355a5f4580"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classShaderProgram.html#a25650db3acd964120e2adb355a5f4580">ShaderType</a> { <br />
 &#160;&#160;<b>none</b> = -1, 
 <b>vertex</b> = 0, 
 <b>fragment</b> = 1, 
@@ -103,37 +105,287 @@ Public Types</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a4428c9c292fa5bdd9860463b15bf29e4"><td class="memItemLeft" align="right" valign="top"><a id="a4428c9c292fa5bdd9860463b15bf29e4"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>PrepareShader</b> (const std::string &amp;file)</td></tr>
+<tr class="memitem:a4428c9c292fa5bdd9860463b15bf29e4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classShaderProgram.html#a4428c9c292fa5bdd9860463b15bf29e4">PrepareShader</a> (const std::string &amp;file)</td></tr>
 <tr class="separator:a4428c9c292fa5bdd9860463b15bf29e4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a11c7f81e8c4fb089a2f7507c99116b4e"><td class="memItemLeft" align="right" valign="top"><a id="a11c7f81e8c4fb089a2f7507c99116b4e"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>Start</b> ()</td></tr>
+<tr class="memitem:a11c7f81e8c4fb089a2f7507c99116b4e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classShaderProgram.html#a11c7f81e8c4fb089a2f7507c99116b4e">Start</a> ()</td></tr>
 <tr class="separator:a11c7f81e8c4fb089a2f7507c99116b4e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afc331f43c1e7d98f08ca0bed736e8a25"><td class="memItemLeft" align="right" valign="top"><a id="afc331f43c1e7d98f08ca0bed736e8a25"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>Stop</b> ()</td></tr>
+<tr class="memitem:afc331f43c1e7d98f08ca0bed736e8a25"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classShaderProgram.html#afc331f43c1e7d98f08ca0bed736e8a25">Stop</a> ()</td></tr>
 <tr class="separator:afc331f43c1e7d98f08ca0bed736e8a25"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac1ef140864363ba85795d946dbc6b532"><td class="memItemLeft" align="right" valign="top"><a id="ac1ef140864363ba85795d946dbc6b532"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>CleanUp</b> ()</td></tr>
+<tr class="memitem:ac1ef140864363ba85795d946dbc6b532"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classShaderProgram.html#ac1ef140864363ba85795d946dbc6b532">CleanUp</a> ()</td></tr>
 <tr class="separator:ac1ef140864363ba85795d946dbc6b532"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
-<tr class="memitem:a2ac1f255d58995b41ea6dcca0233e91c"><td class="memItemLeft" align="right" valign="top"><a id="a2ac1f255d58995b41ea6dcca0233e91c"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>BindAttributes</b> ()=0</td></tr>
+<tr class="memitem:a2ac1f255d58995b41ea6dcca0233e91c"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classShaderProgram.html#a2ac1f255d58995b41ea6dcca0233e91c">BindAttributes</a> ()=0</td></tr>
 <tr class="separator:a2ac1f255d58995b41ea6dcca0233e91c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad2f412c08d2f367cc40a85966dbb49f9"><td class="memItemLeft" align="right" valign="top"><a id="ad2f412c08d2f367cc40a85966dbb49f9"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>BindAttribute</b> (int attributeNumber, const std::string &amp;variableName)</td></tr>
+<tr class="memitem:ad2f412c08d2f367cc40a85966dbb49f9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classShaderProgram.html#ad2f412c08d2f367cc40a85966dbb49f9">BindAttribute</a> (int attributeNumber, const std::string &amp;variableName)</td></tr>
 <tr class="separator:ad2f412c08d2f367cc40a85966dbb49f9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa0d87b275ccd4d2b3866494e5f6650ee"><td class="memItemLeft" align="right" valign="top"><a id="aa0d87b275ccd4d2b3866494e5f6650ee"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>GetAllUniformLocations</b> ()=0</td></tr>
+<tr class="memitem:aa0d87b275ccd4d2b3866494e5f6650ee"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classShaderProgram.html#aa0d87b275ccd4d2b3866494e5f6650ee">GetAllUniformLocations</a> ()=0</td></tr>
 <tr class="separator:aa0d87b275ccd4d2b3866494e5f6650ee"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3999d4a411508639b41bade59ddd2577"><td class="memItemLeft" align="right" valign="top"><a id="a3999d4a411508639b41bade59ddd2577"></a>
-uint&#160;</td><td class="memItemRight" valign="bottom"><b>GetUniformLocation</b> (const std::string &amp;uniformName)</td></tr>
+<tr class="memitem:a3999d4a411508639b41bade59ddd2577"><td class="memItemLeft" align="right" valign="top">uint&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classShaderProgram.html#a3999d4a411508639b41bade59ddd2577">GetUniformLocation</a> (const std::string &amp;uniformName)</td></tr>
 <tr class="separator:a3999d4a411508639b41bade59ddd2577"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac46febb828447bb5c0f353c988695c85"><td class="memItemLeft" align="right" valign="top"><a id="ac46febb828447bb5c0f353c988695c85"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>LoadUniform</b> (uint location, glm::mat4 &amp;matrix)</td></tr>
+<tr class="memitem:ac46febb828447bb5c0f353c988695c85"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classShaderProgram.html#ac46febb828447bb5c0f353c988695c85">LoadUniform</a> (uint location, glm::mat4 &amp;matrix)</td></tr>
 <tr class="separator:ac46febb828447bb5c0f353c988695c85"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Wrapper for basic shader functions.</p>
+<p>New shaders should implement this class. </p>
+</div><h2 class="groupheader">Member Enumeration Documentation</h2>
+<a id="a25650db3acd964120e2adb355a5f4580"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a25650db3acd964120e2adb355a5f4580">&#9670;&nbsp;</a></span>ShaderType</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="classShaderProgram.html#a25650db3acd964120e2adb355a5f4580">ShaderProgram::ShaderType</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>When loading the shader into the GPU, we need to specify what type of shader it is. </p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="ad2f412c08d2f367cc40a85966dbb49f9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad2f412c08d2f367cc40a85966dbb49f9">&#9670;&nbsp;</a></span>BindAttribute()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ShaderProgram::BindAttribute </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>attributeNumber</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>variableName</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Initializes the "variable" in the shader code. In order to use a variable such as vec3 position in shader code, that variable needs to be initialized. Call this method on each variable.</p>
+<p>attributeNumber refers to the ordering of the appearance of the variable in shader code, beginning with 0.</p>
+<p>variableName is the name of that variable.</p>
+<p>Make sure that these values match what is written in the shader code! </p>
+
+</div>
+</div>
+<a id="a2ac1f255d58995b41ea6dcca0233e91c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2ac1f255d58995b41ea6dcca0233e91c">&#9670;&nbsp;</a></span>BindAttributes()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void ShaderProgram::BindAttributes </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Abstract method that will call the <a class="el" href="classShaderProgram.html#ad2f412c08d2f367cc40a85966dbb49f9">BindAttribute()</a> method for each attribute that the specific shader requires. </p>
+
+<p>Implemented in <a class="el" href="classBasicShader.html#a33bed2f736b330e753dad661acb7672d">BasicShader</a>.</p>
+
+</div>
+</div>
+<a id="ac1ef140864363ba85795d946dbc6b532"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac1ef140864363ba85795d946dbc6b532">&#9670;&nbsp;</a></span>CleanUp()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ShaderProgram::CleanUp </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Release all resources. </p>
+
+</div>
+</div>
+<a id="aa0d87b275ccd4d2b3866494e5f6650ee"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa0d87b275ccd4d2b3866494e5f6650ee">&#9670;&nbsp;</a></span>GetAllUniformLocations()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void ShaderProgram::GetAllUniformLocations </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>This method is a reminder to initialize all uniform variables properly in each shader.</p>
+<p>A uniform is a variable that is applied globally to everything that is being drawn by the shader, such as the location of a camera or light source.</p>
+<p>Each shader will have its own set of uniforms. The IDs of those uniforms need to be initialized, which is handled in the <a class="el" href="classShaderProgram.html#a3999d4a411508639b41bade59ddd2577">GetUniformLocation()</a> method. </p>
+
+<p>Implemented in <a class="el" href="classBasicShader.html#a4d19dd3dd21beb9e33b0824af5f089c5">BasicShader</a>.</p>
+
+</div>
+</div>
+<a id="a3999d4a411508639b41bade59ddd2577"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3999d4a411508639b41bade59ddd2577">&#9670;&nbsp;</a></span>GetUniformLocation()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint ShaderProgram::GetUniformLocation </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>uniformName</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Ask OpenGL for an ID for the given uniform variable. This ID is the order of the uniform variable list in the shader code. </p>
+
+</div>
+</div>
+<a id="ac46febb828447bb5c0f353c988695c85"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac46febb828447bb5c0f353c988695c85">&#9670;&nbsp;</a></span>LoadUniform()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ShaderProgram::LoadUniform </td>
+          <td>(</td>
+          <td class="paramtype">uint&#160;</td>
+          <td class="paramname"><em>location</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">glm::mat4 &amp;&#160;</td>
+          <td class="paramname"><em>matrix</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Load the uniform variable at the given location.</p>
+<p>This method should be overloaded for all kinds of data that will be sent to the GPU. </p>
+
+</div>
+</div>
+<a id="a4428c9c292fa5bdd9860463b15bf29e4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4428c9c292fa5bdd9860463b15bf29e4">&#9670;&nbsp;</a></span>PrepareShader()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ShaderProgram::PrepareShader </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>file</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Given the path to a text file containing the shader code, load it into the GPU. The file path is relative to the makefile.</p>
+<p>This method should be called when the shader is first initialized. A great place to do this would be in the Start function of the engine. </p>
+
+</div>
+</div>
+<a id="a11c7f81e8c4fb089a2f7507c99116b4e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a11c7f81e8c4fb089a2f7507c99116b4e">&#9670;&nbsp;</a></span>Start()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ShaderProgram::Start </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Activate the shader.</p>
+<p>This should be called at the beginning of each Update() method. </p>
+
+</div>
+</div>
+<a id="afc331f43c1e7d98f08ca0bed736e8a25"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afc331f43c1e7d98f08ca0bed736e8a25">&#9670;&nbsp;</a></span>Stop()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ShaderProgram::Stop </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Deactivate the shader.</p>
+<p>This should be called at the end of each Update() method. </p>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li>systems/<a class="el" href="shaderprogram_8hpp_source.html">shaderprogram.hpp</a></li>
 <li>systems/shaderprogram.cpp</li>

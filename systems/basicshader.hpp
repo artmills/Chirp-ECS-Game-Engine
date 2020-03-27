@@ -48,8 +48,18 @@ private:
 
 protected:
 
-	// overrides:
+	/** Bind the following attributes: 
+	 * 
+	 * 1) 0 -> vPosition.
+	 * 2) 1 -> vColor.
+	 */
 	void BindAttributes();
+
+
+	/** Get all uniform locations from the GPU:
+	 *
+	 * 1) MVP matrix.
+	 */
 	void GetAllUniformLocations();
 
 };

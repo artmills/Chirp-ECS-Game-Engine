@@ -78,40 +78,46 @@ $(function() {
 <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &quot;../utilities.hpp&quot;</span></div>
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &quot;shaderprogram.hpp&quot;</span></div>
 <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160; </div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment">// basic implementation of a shader.</span></div>
-<div class="line"><a name="l00010"></a><span class="lineno"><a class="line" href="classBasicShader.html">   10</a></span>&#160;<span class="keyword">class </span><a class="code" href="classBasicShader.html">BasicShader</a> : <span class="keyword">public</span> <a class="code" href="classShaderProgram.html">ShaderProgram</a></div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;{</div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    <a class="code" href="classBasicShader.html">BasicShader</a>();</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    ~<a class="code" href="classBasicShader.html">BasicShader</a>();</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160; </div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    <span class="keywordtype">void</span> Initialize();</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160; </div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    <span class="comment">// uniforms.</span></div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    <span class="keywordtype">void</span> LoadModelViewProjectionMatrix(glm::mat4&amp; mvp);</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160; </div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160; </div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    <span class="comment">// source code:</span></div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    <span class="keyword">static</span> std::string m_shaderFile;</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160; </div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    <span class="comment">// uniforms:</span></div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    uint m_locationModelViewProjectionMatrix;</div>
+<div class="line"><a name="l00020"></a><span class="lineno"><a class="line" href="classBasicShader.html">   20</a></span>&#160;<span class="keyword">class </span><a class="code" href="classBasicShader.html">BasicShader</a> : <span class="keyword">public</span> <a class="code" href="classShaderProgram.html">ShaderProgram</a></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;{</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160; </div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    <a class="code" href="classBasicShader.html#a6a8646629293f3b62d2cfd08f66afbba">BasicShader</a>();</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    ~<a class="code" href="classBasicShader.html">BasicShader</a>();</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160; </div>
 <div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160; </div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <span class="comment">// print:</span></div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    <span class="keywordtype">void</span> PrintRowMajor(glm::mat4&amp; matrix);</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classBasicShader.html#abc4cadb6fb7191c55627a38e2f1bc435">Initialize</a>();</div>
 <div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160; </div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="keyword">protected</span>:</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160; </div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    <span class="comment">// overrides:</span></div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    <span class="keywordtype">void</span> BindAttributes();</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    <span class="keywordtype">void</span> GetAllUniformLocations();</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160; </div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classBasicShader.html#abcf99f310117c3317d3fb5988be67834">LoadModelViewProjectionMatrix</a>(glm::mat4&amp; mvp);</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160; </div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="keyword">private</span>:</div>
 <div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160; </div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;};</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160; </div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <span class="keyword">static</span> std::string m_shaderFile;</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160; </div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160; </div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    uint m_locationModelViewProjectionMatrix;</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160; </div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160; </div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    <span class="keywordtype">void</span> PrintRowMajor(glm::mat4&amp; matrix);</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160; </div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;<span class="keyword">protected</span>:</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160; </div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classBasicShader.html#a33bed2f736b330e753dad661acb7672d">BindAttributes</a>();</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160; </div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160; </div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classBasicShader.html#a4d19dd3dd21beb9e33b0824af5f089c5">GetAllUniformLocations</a>();</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160; </div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;};</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160; </div>
 </div><!-- fragment --></div><!-- contents -->
-<div class="ttc" id="aclassBasicShader_html"><div class="ttname"><a href="classBasicShader.html">BasicShader</a></div><div class="ttdef"><b>Definition:</b> basicshader.hpp:10</div></div>
-<div class="ttc" id="aclassShaderProgram_html"><div class="ttname"><a href="classShaderProgram.html">ShaderProgram</a></div><div class="ttdef"><b>Definition:</b> shaderprogram.hpp:15</div></div>
+<div class="ttc" id="aclassBasicShader_html"><div class="ttname"><a href="classBasicShader.html">BasicShader</a></div><div class="ttdef"><b>Definition:</b> basicshader.hpp:20</div></div>
+<div class="ttc" id="aclassBasicShader_html_a33bed2f736b330e753dad661acb7672d"><div class="ttname"><a href="classBasicShader.html#a33bed2f736b330e753dad661acb7672d">BasicShader::BindAttributes</a></div><div class="ttdeci">void BindAttributes()</div><div class="ttdef"><b>Definition:</b> basicshader.cpp:18</div></div>
+<div class="ttc" id="aclassBasicShader_html_a6a8646629293f3b62d2cfd08f66afbba"><div class="ttname"><a href="classBasicShader.html#a6a8646629293f3b62d2cfd08f66afbba">BasicShader::BasicShader</a></div><div class="ttdeci">BasicShader()</div><div class="ttdef"><b>Definition:</b> basicshader.cpp:4</div></div>
+<div class="ttc" id="aclassBasicShader_html_abc4cadb6fb7191c55627a38e2f1bc435"><div class="ttname"><a href="classBasicShader.html#abc4cadb6fb7191c55627a38e2f1bc435">BasicShader::Initialize</a></div><div class="ttdeci">void Initialize()</div><div class="ttdef"><b>Definition:</b> basicshader.cpp:12</div></div>
+<div class="ttc" id="aclassBasicShader_html_a4d19dd3dd21beb9e33b0824af5f089c5"><div class="ttname"><a href="classBasicShader.html#a4d19dd3dd21beb9e33b0824af5f089c5">BasicShader::GetAllUniformLocations</a></div><div class="ttdeci">void GetAllUniformLocations()</div><div class="ttdef"><b>Definition:</b> basicshader.cpp:25</div></div>
+<div class="ttc" id="aclassShaderProgram_html"><div class="ttname"><a href="classShaderProgram.html">ShaderProgram</a></div><div class="ttdef"><b>Definition:</b> shaderprogram.hpp:18</div></div>
+<div class="ttc" id="aclassBasicShader_html_abcf99f310117c3317d3fb5988be67834"><div class="ttname"><a href="classBasicShader.html#abcf99f310117c3317d3fb5988be67834">BasicShader::LoadModelViewProjectionMatrix</a></div><div class="ttdeci">void LoadModelViewProjectionMatrix(glm::mat4 &amp;mvp)</div><div class="ttdef"><b>Definition:</b> basicshader.cpp:31</div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 Generated by &#160;<a href="http://www.doxygen.org/index.html">

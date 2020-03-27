@@ -10,10 +10,10 @@
 
 // for now, include references to systems.
 // later, implement an event system that sends "create entity" events to systems.
-#include "testsystem.hpp"
 #include "rendersystem.hpp"
 #include "physicssystem.hpp"
 #include "inputsystem.hpp"
+#include "terrainfactory.hpp"
 
 #include <vector>
 
@@ -28,6 +28,7 @@ public:
 	void CreateEntity_Triangle();	
 	void CreateEntity_Moveable_Triangle();	
 	void CreateEntity_Square(float botLeftX, float botLeftY, float width, float height);
+	void CreateEntity_Terrain(float x, float y, float z, int width, int height, float blockSize, int percent, int affinity, int smooth);
 
 private: 
 

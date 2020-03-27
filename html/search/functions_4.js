@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['preparemesh_98',['PrepareMesh',['../classLoader.html#a47e96516b03a37ed97be88c94129aa2c',1,'Loader']]]
+  ['initialize_124',['Initialize',['../classBasicShader.html#abc4cadb6fb7191c55627a38e2f1bc435',1,'BasicShader']]],
+  ['isclosed_125',['IsClosed',['../classDisplay.html#af76a27bc743c3f8e32e788a89fed5a3f',1,'Display']]]
 ];

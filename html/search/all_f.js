@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['_7edisplay_49',['~Display',['../classDisplay.html#ac2607a6bb236c55547a4223d40d85d1f',1,'Display']]]
+  ['x_69',['x',['../structVertex.html#aa592e1564aa3b226ff629b824b240310',1,'Vertex']]]
 ];
