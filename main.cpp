@@ -30,11 +30,12 @@ int main()
 	ObjectFactory factory(&renderSystem, &physicsSystem, &inputSystem);	
 
 	//factory.CreateEntity_Triangle();
-	//factory.CreateEntity_Moveable_Triangle();
+	factory.CreateEntity_Moveable_Triangle();
 
-	factory.CreateEntity_Terrain(-10, -10, -50, 200, 200, 0.25f, 42, 3, 2);
+	factory.CreateTerrain(3, 3, 100, 100, -50, -50, -100, 0.25f, 35, 3, 2);
+	//factory.CreateTerrain(4, 4, 100, 100, -25, -25, -50, 0.25f, 35, 3, 2);
 
-
+	int i = 0;
 	const float UPDATE = 0.15f;
 
 	while (!display.IsClosed())
@@ -52,8 +53,10 @@ int main()
 		renderSystem.SynchronizeTransforms(transforms);
 
 		renderSystem.Update(UPDATE);
-
 		display.Update();
+
+		//++i;
+		//std::cout << i << std::endl;
 	}
 	
 	std::cout << "End." << std::endl;

@@ -17,6 +17,7 @@ enum ComponentType
 	Position = 0,
 	Velocity,
 	Transform,
+	Grid,
 	Mesh,
 	Physics,
 	Input,

@@ -4,9 +4,9 @@
 #include <cstdlib>
 #include <ctime>
 
-#include "grid.hpp"
 #include "../ecs/ecsentity.hpp"
 #include "../components/meshcomponent.hpp"
+#include "../components/gridcomponent.hpp"
 
 /** Creates the mesh for the game's terrain.
  *
@@ -21,7 +21,7 @@ class TerrainFactory
 
 public:
 
-	/** Create a terrain mesh from cellular automata.
+	/** Create a grid from cellular automata.
 	 * Parameters:
 	 * 
 	 * x,y : the size of the terrain grid.
@@ -35,28 +35,7 @@ public:
 	 * Diagonals are counted and the block itself is not counted.
 	 *
 	 * smooth: the number of times the cellular automata algorithm should be run. */
-	static MeshComponent CA(const uint entityID, int x, int y, int percent, int affinity, int smooth, float blockSize);
-
-
-private:
-
-	/** Randomly fill in a grid to be *percent* full. 
-	 *
-	 * Currently, this will only choose a block of the grid to be either air or stone. */
-	static void RandomFill(Grid& grid, int percent);
-
-
-	/** Count how many active (stone) neighbors are around the given point.
-	 *
-	 * neighborScanDistance should probably just be set to 1. 
-	 * This counts all eight adjacent neighbors to a given block.
-	 *
-	 * Logic is there to avoid counting the block itself as a neighbor and to skip over the edges of the grid where there are no blocks. */
-	static int GetNeighbors(Grid& grid, int x, int y, int neighborScanDistance);
-
-	
-	/** Apply the cellular automata algorithm. */
-	static Grid Smooth(Grid& grid, int affinity, int neighborScanDistance);
+	static GridComponent CA(int x, int y, int percent, int affinity, int smooth);
 
 
 	/** Create the actual mesh component for the terrain.
@@ -68,7 +47,29 @@ private:
 	 * 
 	 * A color is temporarily hard-coded in as black.
 	 * Later, this should be determined by the block type. */
-	static MeshComponent ConvertToMesh(const uint entityID, Grid& grid, float blockSize);
+	static MeshComponent ConvertToMesh(const uint entityID, GridComponent& grid, float blockSize);
+
+
+
+private:
+
+	/** Randomly fill in a grid to be *percent* full. 
+	 *
+	 * Currently, this will only choose a block of the grid to be either air or stone. */
+	static void RandomFill(GridComponent& grid, int percent);
+
+
+	/** Count how many active (stone) neighbors are around the given point.
+	 *
+	 * neighborScanDistance should probably just be set to 1. 
+	 * This counts all eight adjacent neighbors to a given block.
+	 *
+	 * Logic is there to avoid counting the block itself as a neighbor and to skip over the edges of the grid where there are no blocks. */
+	static int GetNeighbors(GridComponent& grid, int x, int y, int neighborScanDistance);
+
+	
+	/** Apply the cellular automata algorithm. */
+	static GridComponent Smooth(GridComponent& grid, int affinity, int neighborScanDistance);
 
 
 	TerrainFactory();

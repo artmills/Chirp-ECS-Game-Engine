@@ -67,19 +67,56 @@ void ObjectFactory::CreateEntity_Moveable_Triangle()
 	RegisterToSystems(triangle, components);
 }
 
-void ObjectFactory::CreateEntity_Terrain(float x, float y, float z, int width, int height, float blockSize, int percent, int affinity, int smooth)
+
+
+void ObjectFactory::CreateTerrain(int xChunks, int yChunks, int width, int height, float xT, float yT, float zT, float blockSize, int percent, int affinity, int smooth)
 {
-	ECSEntity terrain;
-	TransformComponent transform(terrain.getID(), x, y, z, 0, 0, 0);
-	MeshComponent mesh = TerrainFactory::CA(terrain.getID(), width, height, percent, affinity, smooth, blockSize);
+	// 1) get a total grid for the entire terrain.
+	GridComponent globalGrid = TerrainFactory::CA(xChunks * width, yChunks * height, percent, affinity, smooth);
 
-	terrain.giveComponent(ComponentType::Transform);
-	terrain.giveComponent(ComponentType::Mesh);
+	// 2) create each chunk with a grid and mesh component.
+	for (int x = 0; x < xChunks; ++x)
+	{
+	for (int y = 0; y < yChunks; ++y)
+	{
+		ECSEntity chunk;
+		
+		// a) create the grid for this chunk.
+		GridComponent grid(width, height);
+		for (int i = 0; i < width; ++i)
+		{
+		for (int j = 0; j < height; ++j)
+		{
+			grid.setElement(i, j, globalGrid.getElement(x * width + i, y * height + j));	
+		}
+		}
 
-	std::vector<BaseECSComponent*> components;
-	components.push_back(static_cast<BaseECSComponent*>(&transform));
-	components.push_back(static_cast<BaseECSComponent*>(&mesh));
-	RegisterToSystems(terrain, components);
+		/*grid.Print();
+		std::cout << std::endl;
+		std::cout << std::endl;
+		std::cout << std::endl;*/
+
+		// b) get the mesh for this chunk.
+		MeshComponent mesh = TerrainFactory::ConvertToMesh(chunk.getID(), grid, blockSize);
+
+		// c) get the transform for this chunk.
+		float xPosition = xT + blockSize * (x * width);
+		float yPosition = yT + blockSize * (y * height);
+		TransformComponent transform(chunk.getID(), xPosition, yPosition, zT, 0, 0, 0); 
+
+		// d) add these components to the chunk.
+		chunk.giveComponent(ComponentType::Grid);	
+		chunk.giveComponent(ComponentType::Mesh);	
+		chunk.giveComponent(ComponentType::Transform);	
+		
+		// e) register to systems.
+		std::vector<BaseECSComponent*> components;
+		components.push_back(static_cast<BaseECSComponent*>(&transform));
+		components.push_back(static_cast<BaseECSComponent*>(&mesh));
+		components.push_back(static_cast<BaseECSComponent*>(&grid));
+		RegisterToSystems(chunk, components);
+	}
+	}
 }
 
 void ObjectFactory::RegisterToSystems(ECSEntity& entity, std::vector<BaseECSComponent*>& components)
@@ -96,7 +133,6 @@ void ObjectFactory::RegisterToSystems(ECSEntity& entity, std::vector<BaseECSComp
 					entity.getID(),
 					*static_cast<TransformComponent*>(components[0]),
 					*static_cast<MeshComponent*>(components[1]));
-			//
 		}
 	}
 

@@ -4,10 +4,10 @@
 TerrainFactory::TerrainFactory(){}
 TerrainFactory::~TerrainFactory(){}
 
-MeshComponent TerrainFactory::CA(const uint entityID, int x, int y, int percent, int affinity, int smooth, float blockSize)
+GridComponent TerrainFactory::CA(int x, int y, int percent, int affinity, int smooth)
 {
 	// create the grid and perform cellular automation.
-	Grid grid(x, y);
+	GridComponent grid(x, y);
 	RandomFill(grid, percent);
 	for (int i = 0; i < smooth; ++i)
 	{
@@ -16,10 +16,10 @@ MeshComponent TerrainFactory::CA(const uint entityID, int x, int y, int percent,
 
 	//grid.Print();
 
-	return ConvertToMesh(entityID, grid, blockSize);
+	return grid;
 }
 
-void TerrainFactory::RandomFill(Grid& grid, int percent)
+void TerrainFactory::RandomFill(GridComponent& grid, int percent)
 {
 	// seed the random generator.
 	// This should really be done elsewhere.
@@ -39,7 +39,7 @@ void TerrainFactory::RandomFill(Grid& grid, int percent)
 	}
 }
 
-int TerrainFactory::GetNeighbors(Grid& grid, int x, int y, int neighborScanDistance)
+int TerrainFactory::GetNeighbors(GridComponent& grid, int x, int y, int neighborScanDistance)
 {
 	// since tiles are still considered to be path-connected
 	// if they are diagonal, we will still consider diagonal
@@ -78,11 +78,11 @@ int TerrainFactory::GetNeighbors(Grid& grid, int x, int y, int neighborScanDista
 }
 
 
-Grid TerrainFactory::Smooth(Grid& grid, int affinity, int neighborScanDistance)
+GridComponent TerrainFactory::Smooth(GridComponent& grid, int affinity, int neighborScanDistance)
 {
 	// get a blank grid. this grid will be filled in by
 	// scanning the given grid. 
-	Grid smoothGrid(grid.getRows(), grid.getColumns());
+	GridComponent smoothGrid(grid.getRows(), grid.getColumns());
 
 	for (int x = 0; x < grid.getRows(); ++x)
 	{
@@ -104,7 +104,7 @@ Grid TerrainFactory::Smooth(Grid& grid, int affinity, int neighborScanDistance)
 }
 
 
-MeshComponent TerrainFactory::ConvertToMesh(uint entityID, Grid& grid, float blockSize)
+MeshComponent TerrainFactory::ConvertToMesh(uint entityID, GridComponent& grid, float blockSize)
 {
 	std::vector<Vertex> vertices;
 	std::vector<uint> triangles;
